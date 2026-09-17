@@ -19,6 +19,8 @@ export function Sources() {
             <li key={source.url}>
               <a
                 href={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm text-accent-strong underline decoration-accent/30 underline-offset-4 transition hover:decoration-accent"
               >
                 {source.label} ↗
