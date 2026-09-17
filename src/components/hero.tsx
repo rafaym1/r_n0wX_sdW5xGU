@@ -36,7 +36,7 @@ export function Hero() {
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <a
-            href="https://app.lightsprint.ai"
+            href="https://lightsprint.ai"
             className="rounded-full px-6 py-3 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition hover:opacity-90"
             style={{
               background: "linear-gradient(105deg, #fb773a 7.13%, #ff5619 56.12%)",
