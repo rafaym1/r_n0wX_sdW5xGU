@@ -34,6 +34,8 @@ export function SiteHeader() {
         </nav>
         <a
           href="https://lightsprint.ai"
+          target="_blank"
+          rel="noopener noreferrer"
           className="rounded-full px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sm transition hover:opacity-90"
           style={{
             background: "linear-gradient(105deg, #fb773a 7.13%, #ff5619 56.12%)",

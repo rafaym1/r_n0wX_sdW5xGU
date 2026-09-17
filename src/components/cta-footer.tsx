@@ -19,6 +19,8 @@ export function CtaFooter() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="https://lightsprint.ai"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full px-6 py-3 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition hover:opacity-90"
             style={{
               background: "linear-gradient(105deg, #fb773a 7.13%, #ff5619 56.12%)",
@@ -28,6 +30,8 @@ export function CtaFooter() {
           </a>
           <a
             href="https://github.com/features/copilot"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-foreground transition hover:border-neutral-300 hover:bg-surface-muted"
           >
             Compare with GitHub Copilot ↗
