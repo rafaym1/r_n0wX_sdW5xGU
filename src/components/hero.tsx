@@ -12,19 +12,23 @@ export function Hero() {
   ).length;
 
   return (
-    <section className="relative overflow-hidden border-b border-white/10">
+    <section className="relative overflow-hidden border-b border-border">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/40 via-slate-950 to-slate-950"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at top, var(--accent-soft) 0%, var(--background) 60%)",
+        }}
       />
       <div className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28">
-        <p className="mb-4 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-sky-300">
+        <p className="mb-4 inline-flex items-center rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-accent-strong">
           Live comparison &middot; built with LightSprint, reviewed by a human
         </p>
-        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-6xl">
+        <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-foreground sm:text-6xl">
           LightSprint vs. GitHub Copilot
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-slate-300 sm:text-xl">
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
           One is the assistant already living in your editor. The other is a
           team of AI engineers that boots a sandbox, works a whole task
           across your repos, and hands back a real pull request. Here is how
@@ -33,44 +37,47 @@ export function Hero() {
         <div className="mt-10 flex flex-wrap gap-4">
           <a
             href="https://app.lightsprint.ai"
-            className="rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-500/20 transition hover:bg-sky-400"
+            className="rounded-full px-6 py-3 text-sm font-semibold text-accent-foreground shadow-lg shadow-accent/20 transition hover:opacity-90"
+            style={{
+              background: "linear-gradient(105deg, #fb773a 7.13%, #ff5619 56.12%)",
+            }}
           >
             Start a LightSprint task
           </a>
           <a
             href="#comparison"
-            className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/5"
+            className="rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-foreground transition hover:border-neutral-300 hover:bg-surface-muted"
           >
             Jump to the full table ↓
           </a>
         </div>
-        <dl className="mt-16 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
+        <dl className="mt-16 grid max-w-2xl grid-cols-3 gap-6 border-t border-border pt-8">
           <div>
-            <dt className="text-xs uppercase tracking-wide text-slate-400">
+            <dt className="text-xs uppercase tracking-wide text-muted-foreground">
               LightSprint-only
             </dt>
-            <dd className="mt-1 text-3xl font-semibold text-sky-300">
+            <dd className="mt-1 text-3xl font-semibold text-accent-strong">
               {lightsprintWins}
             </dd>
           </div>
           <div>
-            <dt className="text-xs uppercase tracking-wide text-slate-400">
+            <dt className="text-xs uppercase tracking-wide text-muted-foreground">
               Both support
             </dt>
-            <dd className="mt-1 text-3xl font-semibold text-slate-200">
+            <dd className="mt-1 text-3xl font-semibold text-foreground">
               {bothSupport}
             </dd>
           </div>
           <div>
-            <dt className="text-xs uppercase tracking-wide text-slate-400">
+            <dt className="text-xs uppercase tracking-wide text-muted-foreground">
               Copilot-only
             </dt>
-            <dd className="mt-1 text-3xl font-semibold text-slate-200">
+            <dd className="mt-1 text-3xl font-semibold text-foreground">
               {copilotWins}
             </dd>
           </div>
         </dl>
-        <p className="mt-3 max-w-2xl text-xs text-slate-500">
+        <p className="mt-3 max-w-2xl text-xs text-muted-foreground">
           Counted live from the {comparisonRows.length}-row table below — edit
           the data, the numbers above move with it.
         </p>

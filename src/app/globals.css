@@ -1,24 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617;
-  --foreground: #f1f5f9;
+  /* Matches LightSprint's own light-mode design tokens (lightsprint.ai) */
+  --background: #f8f7f7;
+  --foreground: #1c1c1b;
+  --surface: #ffffff;
+  --surface-muted: #f3f2f0;
+  --border: #ebeae8;
+  --muted-foreground: #6b6a67;
+  --accent: #ff5619;
+  --accent-strong: #ef4e03;
+  --accent-hover: #de5618;
+  --accent-soft: #fff1ea;
+  --accent-foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-foreground: var(--accent-foreground);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 ::selection {
-  background: #2462e1;
-  color: #f8fafc;
+  background: var(--accent);
+  color: var(--accent-foreground);
 }

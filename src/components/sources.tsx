@@ -2,12 +2,12 @@ import { copilotSources, lastVerified } from "@/lib/data";
 
 export function Sources() {
   return (
-    <section id="sources" className="border-t border-white/10 bg-slate-950">
+    <section id="sources" className="border-t border-border bg-background">
       <div className="mx-auto max-w-3xl px-6 py-16">
-        <h2 className="text-xl font-semibold text-white">
+        <h2 className="text-xl font-semibold text-foreground">
           Where the Copilot facts come from
         </h2>
-        <p className="mt-2 text-sm text-slate-400">
+        <p className="mt-2 text-sm text-muted-foreground">
           Every GitHub Copilot claim on this page was fetched live from
           GitHub&apos;s own documentation on {lastVerified} — not recalled
           from memory. LightSprint&apos;s side comes from LightSprint&apos;s
@@ -19,7 +19,7 @@ export function Sources() {
             <li key={source.url}>
               <a
                 href={source.url}
-                className="text-sm text-sky-300 underline decoration-sky-300/30 underline-offset-4 transition hover:text-sky-200 hover:decoration-sky-200"
+                className="text-sm text-accent-strong underline decoration-accent/30 underline-offset-4 transition hover:decoration-accent"
               >
                 {source.label} ↗
               </a>

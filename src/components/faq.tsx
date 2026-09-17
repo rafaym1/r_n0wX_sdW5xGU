@@ -30,12 +30,12 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-slate-950">
+    <section id="faq" className="bg-background">
       <div className="mx-auto max-w-3xl px-6 py-16">
-        <h2 className="text-2xl font-semibold text-white sm:text-3xl">
+        <h2 className="text-2xl font-semibold text-foreground sm:text-3xl">
           Frequently asked
         </h2>
-        <div className="mt-8 divide-y divide-white/10 border-t border-b border-white/10">
+        <div className="mt-8 divide-y divide-border border-t border-b border-border">
           {FAQ_ITEMS.map((item, i) => {
             const isOpen = openIndex === i;
             return (
@@ -47,12 +47,12 @@ export function Faq() {
                   data-testid={`faq-toggle-${slugify(item.q)}`}
                   className="flex w-full items-center justify-between gap-4 py-5 text-left"
                 >
-                  <span className="text-sm font-medium text-slate-100 sm:text-base">
+                  <span className="text-sm font-medium text-foreground sm:text-base">
                     {item.q}
                   </span>
                   <span
                     aria-hidden
-                    className={`shrink-0 text-xl text-slate-500 transition-transform ${
+                    className={`shrink-0 text-xl text-accent-strong transition-transform ${
                       isOpen ? "rotate-45" : ""
                     }`}
                   >
@@ -60,7 +60,7 @@ export function Faq() {
                   </span>
                 </button>
                 {isOpen && (
-                  <p className="pb-5 text-sm leading-relaxed text-slate-400">
+                  <p className="pb-5 text-sm leading-relaxed text-muted-foreground">
                     {item.a}
                   </p>
                 )}
