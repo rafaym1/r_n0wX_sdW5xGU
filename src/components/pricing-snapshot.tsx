@@ -4,7 +4,7 @@ export function PricingSnapshot() {
   const copilotPlans = pricingPlans.filter((p) => p.product === "copilot");
 
   return (
-    <section className="border-b border-white/10 bg-slate-950">
+    <section id="pricing" className="border-b border-white/10 bg-slate-950">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <h2 className="text-2xl font-semibold text-white sm:text-3xl">
           Pricing, at a glance

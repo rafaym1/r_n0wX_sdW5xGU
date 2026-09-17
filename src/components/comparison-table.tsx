@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import {
   categories,
   comparisonRows,
+  slugify,
   type Category,
   type Support,
 } from "@/lib/data";
@@ -69,6 +70,7 @@ export function ComparisonTable() {
                 type="button"
                 role="tab"
                 aria-selected={active}
+                data-testid={`category-filter-${slugify(f)}`}
                 onClick={() => setFilter(f)}
                 className={`rounded-full border px-3.5 py-1.5 text-sm font-medium transition ${
                   active
@@ -97,6 +99,7 @@ export function ComparisonTable() {
                     type="button"
                     onClick={() => setExpanded(isOpen ? null : row.feature)}
                     aria-expanded={isOpen}
+                    data-testid={`row-toggle-${slugify(row.feature)}`}
                     className="grid w-full grid-cols-[1fr_auto_auto] items-center gap-4 px-5 py-4 text-left transition hover:bg-white/[0.03]"
                   >
                     <span className="text-sm font-medium text-slate-100">

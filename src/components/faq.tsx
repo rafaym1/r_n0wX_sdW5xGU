@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { slugify } from "@/lib/data";
 
 const FAQ_ITEMS = [
   {
@@ -43,6 +44,7 @@ export function Faq() {
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   aria-expanded={isOpen}
+                  data-testid={`faq-toggle-${slugify(item.q)}`}
                   className="flex w-full items-center justify-between gap-4 py-5 text-left"
                 >
                   <span className="text-sm font-medium text-slate-100 sm:text-base">
