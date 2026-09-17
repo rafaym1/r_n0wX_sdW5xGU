@@ -17,7 +17,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Where do these numbers come from?",
-    a: "The comparison table above is driven by a single data file in this page's source, not a spreadsheet screenshot — every row lists what each product actually does today, sourced from LightSprint's own product documentation and GitHub Copilot's public feature pages. See something stale? It's one PR away from being fixed.",
+    a: "The comparison table is driven by a single data file in this page's source, not a spreadsheet screenshot. LightSprint's side comes from LightSprint's own product documentation; GitHub Copilot's side was fetched live from docs.github.com and github.blog while writing this page — quoting GitHub's own wording in several rows rather than paraphrasing from memory. See the Sources section below for the exact pages. See something stale? It's one PR away from being fixed.",
   },
   {
     q: "Why does LightSprint mark itself \"No\" on some rows?",

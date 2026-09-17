@@ -2,6 +2,7 @@ const NAV_LINKS = [
   { href: "#comparison", label: "Comparison" },
   { href: "#deep-dive", label: "Deep dive" },
   { href: "#faq", label: "FAQ" },
+  { href: "#sources", label: "Sources" },
 ];
 
 export function SiteHeader() {
